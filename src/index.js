@@ -7,10 +7,17 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 import 'jquery' 
 
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducer from './reducers/reducer';
+
+const store = createStore(reducer)
+
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store ={store} >
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
