@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import IpoContainer from './containers/ipoContainer'
 
 function App() {
   return (
     <div className="App">
-          Blossuming Mountain
+    <h1> Search function bar goes here with download to csv functionality</h1>
+    <IpoContainer/>
     </div>
   );
 }
@@ -20,7 +22,7 @@ export default App;
   
 // Symbol Lookup => Type in the isin or the company name, and we get results in an array. 
   
-  // News => type in a query and information in an array comes back to us
+    //  News => type in a query and information in an array comes back to us
     // News sentiment => basically how many times a company has been mentioned in the past week or so. 
   
     // IPO Calandar => when any IPOs are coming into the forray in the future
