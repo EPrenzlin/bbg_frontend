@@ -7,7 +7,7 @@ import IpoContainer from './containers/ipoContainer'
 function App() {
   return (
     <div className="App">
-    <h1> Search function bar goes here with download to csv functionality</h1>
+    <h1> Add in Navbar that goes to different components </h1>
     <IpoContainer/>
     </div>
   );
