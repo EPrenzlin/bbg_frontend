@@ -1,15 +1,15 @@
 import './App.css';
-import IpoContainer from './containers/ipoContainer'
+import SymbolContainer from './containers/symbolContainer.js'
 
 
-import {  } from './actions/exemptionActions'
+// import {  } from './actions/exemptionActions'
 // need to import the various actions we have within our actions/actions JS ( this is where we can use the open library JS to make our calls.)
 
 function App() {
   return (
     <div className="App">
     <h1> Add in Navbar that goes to different components </h1>
-    <IpoContainer/>
+    <SymbolContainer/>
     </div>
   );
 }
