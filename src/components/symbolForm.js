@@ -1,23 +1,25 @@
 import React, {Component} from 'react' 
 import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 
-export default class SymbolForm extends React.Component {
+export default class SymbolForm extends Component {
 
     state = {
-        symbol:"" 
+        search: "" 
     }
 
-    handleChangeFrom = event => {
+    handleChange = event => {
+        const value = event.target.value 
         this.setState({
-          [event.target.name]: event.target.value
+          search: value
         })
       }
 
     onSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state)
+        console.log(this.state.search)
         this.setState({
-            symbol:"", 
+            search:""
         })
     }
 
@@ -25,9 +27,10 @@ export default class SymbolForm extends React.Component {
     render() {
       return( 
     <div> 
-        <h1> 
-        SymbolForm
-        </h1>
+    <Form onSubmit={this.onSubmit}>   
+    <textarea input type="text" name="searchquery" placeholder= "Input Search query (ISIN, SYMBOL)" value={this.state.search} onChange={this.handleChange}/> 
+    <Button type="submit" variant="primary">Search</Button> 
+    </Form>
     </div>
       )
     }
