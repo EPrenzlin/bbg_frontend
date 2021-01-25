@@ -6,4 +6,4 @@ const reducer = (state= {placeholder:[]}, action) => {
         return state;
     }
   }
-export default reducer
+export default reducer 
