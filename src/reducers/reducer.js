@@ -1,5 +1,5 @@
  
-const reducer = (state= {placeholder:[]}, action) => {
+const reducer = (state= {results:[]}, action) => {
 
     switch (action.type) {
     default:
