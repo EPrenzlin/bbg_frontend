@@ -1,4 +1,5 @@
-import {token} from '../api_info'
+const token = `${process.env.REACT_APP_KEY}`
+
 
 const api_url = "https://finnhub.io/api/v1/search?q="
 
