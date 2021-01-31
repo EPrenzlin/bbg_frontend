@@ -1,13 +1,16 @@
-const token = `${process.env.REACT_APP_KEY}`
+const token_api = "&token="
 
+const token = `${token_api}${process.env.REACT_APP_API_KEY}`
+const regex_token = token.replace(/['"]+/g, '') 
 
-const api_url = "https://finnhub.io/api/v1/search?q="
+const base_api = "https://finnhub.io/api/v1/search?q="
+
 
 export const searchSymbol = (query) => {
-    fetch(api_url +`${query}&token=${token}`)
+    return dispatch => {
+    fetch( `${base_api}${query}${regex_token}`)
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data =>
+        dispatch({type: "SEARCH_RESULT", data}))
+    }
 }
-
-
-

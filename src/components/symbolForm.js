@@ -17,8 +17,8 @@ export default class SymbolForm extends Component {
 
     onSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state.search)
-        this.props.searchSymbol(this.state.search)
+        const query = this.state.search
+        this.props.searchSymbol(query)
         this.setState({
             search:""
         })

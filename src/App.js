@@ -1,20 +1,27 @@
 import './App.css';
 import SymbolContainer from './containers/symbolContainer.js'
+import {connect} from 'react-redux'
+import React, {Component} from 'react'
 
+import {searchSymbol} from './actions/ApiActions.js' 
 
-// import {  } from './actions/exemptionActions'
-// need to import the various actions we have within our actions/actions JS ( this is where we can use the open library JS to make our calls.)
-
-function App() {
+class App extends Component{
+  render(){
   return (
     <div className="App">
     <h1> Add in Navbar that goes to different components </h1>
-    <SymbolContainer/>
+    <SymbolContainer/> 
     </div>
   );
+}} 
+
+const mapStateToProps = state =>{
+  return {
+    result: state.searchResult, 
+  }
 }
 
-export default App;
+export default connect(mapStateToProps,{searchSymbol})(App) 
 
 
 // Things to add:
