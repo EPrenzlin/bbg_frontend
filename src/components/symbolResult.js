@@ -11,7 +11,7 @@ export default class SymbolResult extends Component {
 <Card style={{ width: '18rem' }}>    
 <h1> Description: {this.props.description} </h1>
     <h1> Hello </h1>
-    {console.log(this.props.results)}
+    {console.log("in Symbol result", this.props)}
 </Card>
     </div>
       )
