@@ -5,7 +5,7 @@ const reducer = ( state= {results:[] }, action) => {
     case 'SEARCH_RESULT':
       return{
         ...state,
-        results:[...state.results, action.data] 
+        results:[action.data.result] 
       }
       default:
       return state

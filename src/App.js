@@ -10,14 +10,14 @@ class App extends Component{
   return (
     <div className="App">
     <h1> Add in Navbar that goes to different components </h1>
-    <SymbolContainer/> 
+    <SymbolContainer searchSymbol={this.props.searchSymbol} searchResults={this.props.result}/> 
     </div>
   );
 }} 
 
-const mapStateToProps = state =>{
+const mapStateToProps = state => {
   return {
-    result: state.searchResult, 
+    result: state.results
   }
 }
 

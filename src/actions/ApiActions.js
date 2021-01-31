@@ -8,9 +8,10 @@ const base_api = "https://finnhub.io/api/v1/search?q="
 
 export const searchSymbol = (query) => {
     return dispatch => {
-    fetch( `${base_api}${query}${regex_token}`)
+    fetch(`${base_api}${query}${regex_token}`)
     .then(response => response.json())
     .then(data =>
-        dispatch({type: "SEARCH_RESULT", data}))
+        dispatch({type: "SEARCH_RESULT", data})
+        )
     }
 }
