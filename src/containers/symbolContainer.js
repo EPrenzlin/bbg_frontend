@@ -11,9 +11,9 @@ export default class SymbolContainer extends Component {
       <div> 
       <SymbolForm searchSymbol={this.props.searchSymbol}/>
 <Row md={3}> 
+
       {this.props.searchResults.map((result) => {
-        // return <SymbolResult description={result.description} symbol={result.description} type={result.type} displaySymbol={result.displaySymbol} />
-        {console.log(result[0].description)}
+        return <SymbolResult resultArray={result} />
         })}
 </Row>
       </div>

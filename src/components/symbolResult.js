@@ -9,9 +9,13 @@ export default class SymbolResult extends Component {
       return( 
     <div> 
 <Card style={{ width: '18rem' }}>    
-<h1> Description: {this.props.description} </h1>
-    <h1> Hello </h1>
-    {console.log("in Symbol result", this.props)}
+{/* <h1> Description: {this.props.description} </h1><br/> 
+<h1> Symbol: {this.props.symbol} </h1><br/>
+<h1> Type: {this.props.type} </h1><br/>
+<h1> Display: {this.props.displaySymbol} </h1><br/>
+<h2> id: {this.props.id} </h2> */}
+{console.log(this.props.resultArray[0])}
+
 </Card>
     </div>
       )
