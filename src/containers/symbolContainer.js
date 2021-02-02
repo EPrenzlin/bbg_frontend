@@ -11,20 +11,10 @@ export default class SymbolContainer extends Component {
       <div> 
       <SymbolForm searchSymbol={this.props.searchSymbol}/>
 
-<Row md={3}> 
+      {this.props.searchResults.map(result => {
+      result.map(obj => console.log(obj)) 
+      })}
 
-      {/* {this.props.searchResults.forEach((result,index) => {
-        console.log(`index is ${result.length}`, result[index])  
-        return <SymbolResult resultArray={result} />
-        })} */}
-
-        {this.props.searchResults.map(result => {
-          result.map(object => {
-          console.log(object)
-          })
-        })}
-
-</Row>
       </div>
 
       )

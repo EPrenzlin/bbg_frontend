@@ -1,6 +1,4 @@
 import React, {Component} from 'react' 
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 
 export default class SymbolResult extends Component {
@@ -9,7 +7,8 @@ export default class SymbolResult extends Component {
       return( 
     <div> 
 <Card style={{ width: '18rem' }}>   
-{console.log("from single", this.props.resultArray.description)}
+<h2> Description:</h2>
+{console.log("in result",this.props.data)}
 </Card>
     </div>
       )
