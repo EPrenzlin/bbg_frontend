@@ -24,3 +24,5 @@ export default class SymbolContainer extends Component {
 
 // pass in the data array down to hte Symbol componennt as a prop. 
 
+// I have an [[{object}], [{object}]] repeated... iterate through each of them to access to objs, 
+// and pass that down to the SymbolResult. 
