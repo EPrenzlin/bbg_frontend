@@ -10,12 +10,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 class App extends Component{
   render(){
   return (
-    <div className="App">
+      <div className="App">
       <Router> 
-        <Navbar> 
-    <h1> Add in Navbar that goes to different components </h1>
+        <Navbar/>
+      <Route exact path="/search" render={() => 
+      <div> 
     <SymbolContainer searchSymbol={this.props.searchSymbol} searchResults={this.props.result}/> 
-    </Navbar>
+    </div>
+    }/>
     </Router>
     </div>
   );
