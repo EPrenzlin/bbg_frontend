@@ -40,13 +40,10 @@ export default connect(mapStateToProps,{searchSymbol})(App)
   
 // Symbol Lookup => Type in the isin or the company name, and we get results in an array. 
   
-    //  News => type in a query and information in an array comes back to us
     //  News sentiment => basically how many times a company has been mentioned in the past week or so. 
   
     // IPO Calandar => when any IPOs are coming into the forray in the future
   
     // Covid data => type in the query, and we get a result
   
-    // Index constituents => What makes up the Nasdaq for example
-
     // total of 5 components 
