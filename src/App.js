@@ -2,15 +2,21 @@ import './App.css';
 import SymbolContainer from './containers/symbolContainer.js'
 import {connect} from 'react-redux'
 import React, {Component} from 'react'
+import Navbar from './components/navbar.js'
 
 import {searchSymbol} from './actions/ApiActions.js' 
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component{
   render(){
   return (
     <div className="App">
+      <Router> 
+        <Navbar> 
     <h1> Add in Navbar that goes to different components </h1>
     <SymbolContainer searchSymbol={this.props.searchSymbol} searchResults={this.props.result}/> 
+    </Navbar>
+    </Router>
     </div>
   );
 }} 
