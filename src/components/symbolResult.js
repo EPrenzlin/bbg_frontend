@@ -8,7 +8,8 @@ export default class SymbolResult extends Component {
     <div> 
 <Card style={{ width: '18rem' }}>   
 <h2> Description:</h2>
-{console.log("in result",this.props.data)}
+<h2> Symbol: </h2>
+<h2> Type: </h2>
 </Card>
     </div>
       )

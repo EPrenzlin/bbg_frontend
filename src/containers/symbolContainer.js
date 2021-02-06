@@ -10,16 +10,17 @@ export default class SymbolContainer extends Component {
     return(
       <div> 
       <SymbolForm searchSymbol={this.props.searchSymbol}/>
-
+    
+      <Row> 
       {this.props.searchResults.map(result => {
-      result.map(obj => console.log(obj)) 
-      })}
-
-      </div>
-
-      )
-    }
-  }
+        return <SymbolResult data ={result}/>
+      })
+      }
+      </Row>
+    </div> 
+    ) 
+  } 
+} 
 
 
 // pass in the data array down to hte Symbol componennt as a prop. 
