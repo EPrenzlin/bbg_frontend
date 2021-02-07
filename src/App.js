@@ -7,6 +7,8 @@ import Navbar from './components/navbar.js'
 import {searchSymbol} from './actions/ApiActions.js' 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import Covid from './components/covid'
+
 class App extends Component{
   render(){
   return (
@@ -16,6 +18,12 @@ class App extends Component{
       <Route exact path="/search" render={() => 
       <div> 
     <SymbolContainer searchSymbol={this.props.searchSymbol} searchResults={this.props.result}/> 
+    </div>
+    }/>
+
+    <Route exact path="/covid" render={() => 
+    <div> 
+      <Covid/> 
     </div>
     }/>
     </Router>
