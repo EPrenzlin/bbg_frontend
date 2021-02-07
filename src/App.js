@@ -3,11 +3,12 @@ import SymbolContainer from './containers/symbolContainer.js'
 import {connect} from 'react-redux'
 import React, {Component} from 'react'
 import Navbar from './components/navbar.js'
-
+import Row from 'react-bootstrap/Row'
 import {searchSymbol, covidData} from './actions/ApiActions.js' 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Covid from './components/covid'
+import NewsContainer from './containers/newsContainer'
 
 class App extends Component{
 
@@ -27,11 +28,18 @@ componentDidMount(){
 
     <Route exact path="/covid" render={() => 
     <div> 
+    <Row sm={3}> 
     {this.props.covid.map(obj =>{
       return <Covid data ={obj}/>
     })}
+    </Row>
     </div>
     }/>
+
+    <Route exact path ="/news" render ={() => 
+    <div> 
+    <NewsContainer/> 
+    </div>} />
     </Router>
     </div>
   );
