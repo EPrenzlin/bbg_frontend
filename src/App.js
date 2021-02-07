@@ -4,12 +4,16 @@ import {connect} from 'react-redux'
 import React, {Component} from 'react'
 import Navbar from './components/navbar.js'
 
-import {searchSymbol} from './actions/ApiActions.js' 
+import {searchSymbol, covidData} from './actions/ApiActions.js' 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Covid from './components/covid'
 
 class App extends Component{
+
+componentDidMount(){
+  this.props.covidData()
+}
   render(){
   return (
       <div className="App">
@@ -23,7 +27,9 @@ class App extends Component{
 
     <Route exact path="/covid" render={() => 
     <div> 
-      <Covid/> 
+    {this.props.covid.map(obj =>{
+      return <Covid data ={obj}/>
+    })}
     </div>
     }/>
     </Router>
@@ -33,11 +39,12 @@ class App extends Component{
 
 const mapStateToProps = state => {
   return {
-    result: state.results
+    result: state.results, 
+    covid: state.covid
   }
 }
 
-export default connect(mapStateToProps,{searchSymbol})(App) 
+export default connect(mapStateToProps,{searchSymbol,covidData})(App) 
 
 
 // Things to add:

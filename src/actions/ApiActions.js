@@ -15,3 +15,14 @@ export const searchSymbol = (query) => {
         )
     }
 }
+
+export const covidData = () => {
+    return dispatch => {
+        fetch(`https://finnhub.io/api/v1/covid19/us?token=c0bbs6f48v6to0roqolg`)
+        .then (response => response.json())
+        .then(data =>
+            dispatch({type:"COVID", data}))
+    }
+}
+
+

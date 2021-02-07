@@ -12,7 +12,7 @@ export default class NavBar extends Component{
               <Nav.Link href="/news">News Sentiment</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/covid">Covid019</Nav.Link>
+              <Nav.Link href="/covid">Covid-19 Data</Nav.Link>
             </Nav.Item>
           </Nav>
         )

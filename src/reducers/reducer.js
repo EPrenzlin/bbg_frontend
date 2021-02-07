@@ -1,5 +1,5 @@
  
-const reducer = ( state= {results:[] }, action) => {
+const reducer = ( state= {results:[], covid:[] }, action) => {
 
     switch (action.type) {
     case 'SEARCH_RESULT':
@@ -13,6 +13,15 @@ const reducer = ( state= {results:[] }, action) => {
         ...state,
         results: newArray
       }
+    case 'COVID': 
+    let covidArray = []
+    action.data.forEach(result => {
+    covidArray.push(result)
+    })
+    return {
+      ...state, 
+      covid: covidArray
+    }
       default:
       return state
   }
