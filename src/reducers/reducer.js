@@ -30,6 +30,14 @@ const reducer = ( state= {results:[], covid:[] }, action) => {
       ...state, 
       covid: sortedArray
     }
+
+    case "SORT_CASES": 
+    console.log(action.data)
+    let caseArray = action.data.sort((a,b) => (a.case < b.case) ? -1: 1 ) 
+    return {
+      ...state, 
+      covid: caseArray
+    }
       default:
       return state
   }

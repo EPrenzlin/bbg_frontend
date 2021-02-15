@@ -5,7 +5,7 @@ import React, {Component} from 'react'
 import Navbar from './components/navbar.js'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
-import {searchSymbol, covidData,sortAlphabetical} from './actions/ApiActions.js' 
+import {searchSymbol, covidData,sortAlphabetical, sortCases} from './actions/ApiActions.js' 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Covid from './components/covid'
@@ -30,6 +30,8 @@ componentDidMount(){
     <Route exact path="/covid" render={() => 
     <div> 
     <Button variant="primary" onClick={this.props.sortAlphabetical}>Sort Alphabetically</Button>{' '}
+    <Button variant="primary" onClick={this.props.sortCases}>Sort by Case Number</Button>{' '}
+
     <Row sm={3}> 
     {this.props.covid.map(obj =>{
       return <Covid data ={obj}/>
@@ -54,7 +56,7 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical})(App) 
+export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical, sortCases})(App) 
 
 
 // Things to add:

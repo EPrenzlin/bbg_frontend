@@ -36,3 +36,12 @@ export const sortAlphabetical = () => {
             dispatch({type:"SORT_ALPHA", data}))
     }
 }
+
+export const sortCases = () => {
+    return dispatch => {
+        fetch(`https://finnhub.io/api/v1/covid19/us?token=c0bbs6f48v6to0roqolg`)
+        .then (response => response.json())
+        .then(data =>
+            dispatch({type:"SORT_CASES", data}))
+    }
+}
