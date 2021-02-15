@@ -14,13 +14,9 @@ const reducer = ( state= {results:[], covid:[] }, action) => {
         results: newArray
       }
     case 'COVID': 
-    let covidArray = []
-    action.data.forEach(result => {
-    covidArray.push(result)
-    })
     return {
       ...state, 
-      covid: covidArray
+      covid: action.data
     }
 
     case "SORT_ALPHA": 
@@ -33,10 +29,18 @@ const reducer = ( state= {results:[], covid:[] }, action) => {
 
     case "SORT_CASES": 
     console.log(action.data)
-    let caseArray = action.data.sort((a,b) => (a.case < b.case) ? -1: 1 ) 
+    let caseArray = action.data.sort((a,b) => (a.case < b.case) ? 1: -1 ) 
     return {
       ...state, 
       covid: caseArray
+    }
+
+    case "SORT_DEATHS": 
+    console.log(action.data)
+    let deathArray = action.data.sort((a,b) => (a.death < b.death) ? 1 : -1 ) 
+    return {
+      ...state, 
+      covid: deathArray
     }
       default:
       return state

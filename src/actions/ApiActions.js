@@ -25,8 +25,6 @@ export const covidData = () => {
     }
 }
 
-// sort by cases 
-// sort by deaths
 
 export const sortAlphabetical = () => {
     return dispatch => {
@@ -43,5 +41,14 @@ export const sortCases = () => {
         .then (response => response.json())
         .then(data =>
             dispatch({type:"SORT_CASES", data}))
+    }
+}
+
+export const sortDeaths = () => {
+    return dispatch => {
+        fetch(`https://finnhub.io/api/v1/covid19/us?token=c0bbs6f48v6to0roqolg`)
+        .then (response => response.json())
+        .then(data =>
+            dispatch({type:"SORT_DEATHS", data}))
     }
 }
