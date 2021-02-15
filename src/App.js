@@ -5,7 +5,7 @@ import React, {Component} from 'react'
 import Navbar from './components/navbar.js'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
-import {searchSymbol, covidData,sortAlphabetical, sortCases, sortDeaths} from './actions/ApiActions.js' 
+import {searchSymbol, covidData,sortAlphabetical, sortCases, sortDeaths, searchNews} from './actions/ApiActions.js' 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Covid from './components/covid'
@@ -43,7 +43,7 @@ componentDidMount(){
 
     <Route exact path ="/news" render ={() => 
     <div> 
-    <NewsContainer/> 
+    <NewsContainer results={this.props.news} searchNews={this.props.searchNews}/> 
     </div>} />
     </Router>
     </div>
@@ -53,16 +53,14 @@ componentDidMount(){
 const mapStateToProps = state => {
   return {
     result: state.results, 
-    covid: state.covid
+    covid: state.covid,
+    news: state.result
   }
 }
 
-export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical, sortCases,sortDeaths})(App) 
+export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical, sortCases,sortDeaths, searchNews})(App) 
 
 
-// Things to add:
-// Navlinks for each component
-// What the rendered Component will show?
 
 //  Key data points I want to be able to display on the app: 
   
@@ -71,7 +69,5 @@ export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical,
     //  News sentiment => basically how many times a company has been mentioned in the past week or so. 
   
     // IPO Calandar => when any IPOs are coming into the forray in the future
-  
-    // Covid data => type in the query, and we get a result
-  
+    
     // total of 5 components 

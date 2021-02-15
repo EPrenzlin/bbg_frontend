@@ -52,3 +52,14 @@ export const sortDeaths = () => {
             dispatch({type:"SORT_DEATHS", data}))
     }
 }
+
+
+export const searchNews = (query) => {
+    return dispatch => {
+    fetch(`https://finnhub.io/api/v1/news-sentiment?symbol=${query}${regex_token}`)
+    .then(response => response.json())
+    .then(data =>
+        dispatch({type: "SEARCH_NEWS", data})
+        )
+    }
+}

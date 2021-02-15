@@ -42,6 +42,14 @@ const reducer = ( state= {results:[], covid:[] }, action) => {
       ...state, 
       covid: deathArray
     }
+
+    case "SEARCH_NEWS":
+      console.table(action.data)
+      return{
+        ...state, 
+        result: action.data
+      }
+
       default:
       return state
   }
