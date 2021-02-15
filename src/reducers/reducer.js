@@ -18,6 +18,7 @@ const reducer = ( state= {results:[], covid:[] }, action) => {
     action.data.forEach(result => {
     covidArray.push(result)
     })
+    console.log(covidArray)
     return {
       ...state, 
       covid: covidArray

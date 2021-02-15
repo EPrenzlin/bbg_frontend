@@ -26,3 +26,6 @@ export const covidData = () => {
 }
 
 
+// sort by state 
+// sort by cases 
+// sort by deaths
