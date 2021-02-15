@@ -4,7 +4,8 @@ import {connect} from 'react-redux'
 import React, {Component} from 'react'
 import Navbar from './components/navbar.js'
 import Row from 'react-bootstrap/Row'
-import {searchSymbol, covidData} from './actions/ApiActions.js' 
+import Button from 'react-bootstrap/Button'
+import {searchSymbol, covidData,sortAlphabetical} from './actions/ApiActions.js' 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Covid from './components/covid'
@@ -28,6 +29,7 @@ componentDidMount(){
 
     <Route exact path="/covid" render={() => 
     <div> 
+    <Button variant="primary" onClick={this.props.sortAlphabetical}>Sort Alphabetically</Button>{' '}
     <Row sm={3}> 
     {this.props.covid.map(obj =>{
       return <Covid data ={obj}/>
@@ -52,7 +54,7 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps,{searchSymbol,covidData})(App) 
+export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical})(App) 
 
 
 // Things to add:

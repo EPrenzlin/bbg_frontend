@@ -1,5 +1,6 @@
 import React, {Component} from 'react' 
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 export default class Covid extends Component {
     
