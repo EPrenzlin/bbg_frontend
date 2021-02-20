@@ -9,7 +9,7 @@ import {searchSymbol, covidData,sortAlphabetical, sortCases, sortDeaths, searchN
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Covid from './components/covid'
-import NewsContainer from './containers/newsContainer'
+import CompanyContainer from './containers/newsContainer'
 
 class App extends Component{
 
@@ -41,9 +41,9 @@ componentDidMount(){
     </div>
     }/>
 
-    <Route exact path ="/news" render ={() => 
+    <Route exact path ="/profile" render ={() => 
     <div> 
-    <NewsContainer results={this.props.news} searchNews={this.props.searchNews}/> 
+    <CompanyContainer results={this.props.news} searchNews={this.props.searchNews}/> 
     </div>} />
     </Router>
     </div>
