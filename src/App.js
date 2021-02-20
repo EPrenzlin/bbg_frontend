@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Covid from './components/covid'
 
 import SymbolContainer from './containers/symbolContainer.js'
-import CompanyContainer from './containers/newsContainer'
+import CompanyContainer from './containers/profileContainer'
 import AllNewsContainer from './containers/allnewsContainer'
 
 
@@ -46,7 +46,7 @@ componentDidMount(){
 
     <Route exact path ="/profile" render ={() => 
     <div> 
-    <CompanyContainer results={this.props.news} searchNews={this.props.searchNews}/> 
+    <CompanyContainer results={this.props.result} searchNews={this.props.searchNews}/> 
     </div>} />
 
     <Route exact path ="/news" render ={() => 

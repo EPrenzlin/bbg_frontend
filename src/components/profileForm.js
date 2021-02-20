@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
-export default class NewsForm extends Component {
+export default class ProfileForm extends Component {
 
     state ={
         search:""
@@ -27,7 +27,7 @@ export default class NewsForm extends Component {
     render() {
     return( 
         <div> 
-            <h2> Get company's news sentiment and statistics. This is only available for US companies.</h2>
+            <h2> Get company's basic information.</h2>
         <Form onSubmit={this.onSubmit}>   
         <textarea input type="text" name="searchquery" placeholder= "Input Search query(SYMBOL)" value={this.state.search} onChange={this.handleChange}/> 
         <Button type="submit" variant="primary">Search</Button> 
