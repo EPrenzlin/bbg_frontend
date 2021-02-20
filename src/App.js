@@ -18,6 +18,7 @@ class App extends Component{
 
 componentDidMount(){
   this.props.covidData()
+  this.props.getNews()
 }
   render(){
   return (

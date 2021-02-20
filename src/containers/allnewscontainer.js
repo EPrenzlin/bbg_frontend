@@ -1,16 +1,18 @@
 import React, {Component} from 'react' 
 import NewsComponent from '../components/newscomponent'
+import Row from 'react-bootstrap/Row'
 
 export default class AllNewsContainer extends Component {
  
-    componentDidMount(){
-        this.props.getNews()
-    }
 
     render() {
     return( 
     <div>
-    <NewsComponent getNews={this.props.getNews} showNews={this.props.news}/> 
+        <Row md={2}> 
+    {this.props.showNews.map(data => {
+        return <NewsComponent data={data}/>
+    })}
+    </Row>
     </div> 
       )
     }

@@ -51,7 +51,7 @@ const reducer = ( state= {results:[], covid:[], news:[] }, action) => {
       }
 
     case "GET_NEWS" : 
-    console.table(action.data) 
+    console.log(" in get reducer", action.data)
     return{
     ...state, 
     news:action.data
