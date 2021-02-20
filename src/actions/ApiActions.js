@@ -61,5 +61,15 @@ export const searchNews = (query) => {
     .then(data =>
         dispatch({type: "SEARCH_NEWS", data})
         )
-    }
+    } 
+} 
+
+export const getNews = () => {
+    return dispatch => {
+        fetch(`https://finnhub.io/api/v1/news?category=general&token=${regex_token}`)
+        .then(response => response.json())
+        .then(data =>
+            dispatch({type: "GET_NEWS", data})
+            )
+        } 
 }
