@@ -1,5 +1,5 @@
  
-const reducer = ( state= {results:[], covid:[] }, action) => {
+const reducer = ( state= {results:[], covid:[], news:[] }, action) => {
 
     switch (action.type) {
     case 'SEARCH_RESULT':
@@ -50,6 +50,12 @@ const reducer = ( state= {results:[], covid:[] }, action) => {
         results: action.data
       }
 
+    case "GET_NEWS" : 
+    console.table(action.data) 
+    return{
+    ...state, 
+    news:action.data
+    }
       default:
       return state
   }

@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 import Navbar from './components/navbar.js'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
-import {searchSymbol, covidData,sortAlphabetical, sortCases, sortDeaths, searchNews} from './actions/ApiActions.js' 
+import {searchSymbol, covidData,sortAlphabetical, sortCases, sortDeaths, searchNews, getNews} from './actions/ApiActions.js' 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Covid from './components/covid'
@@ -51,7 +51,7 @@ componentDidMount(){
 
     <Route exact path ="/news" render ={() => 
     <div> 
-    <AllNewsContainer/> 
+    <AllNewsContainer getNews={this.props.getNews} showNews={this.props.news}/> 
     </div>} />
 
     </Router>
@@ -66,11 +66,11 @@ const mapStateToProps = state => {
   return {
     result: state.results, 
     covid: state.covid,
-    news: state.results
+    news: state.news
   }
 }
 
-export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical, sortCases,sortDeaths, searchNews})(App) 
+export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical, sortCases,sortDeaths, searchNews, getNews})(App) 
 
 
 

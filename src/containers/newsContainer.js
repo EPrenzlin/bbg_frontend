@@ -8,8 +8,6 @@ export default class NewsContainer extends Component {
     return( 
     <div>
     <NewsForm searchNews={this.props.searchNews}/>
-    
-    {console.log('in the news container',this.props.results)}
     <NewsResult results={this.props.results}/>
     </div> 
       )
