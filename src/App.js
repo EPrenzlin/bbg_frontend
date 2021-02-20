@@ -1,5 +1,4 @@
 import './App.css';
-import SymbolContainer from './containers/symbolContainer.js'
 import {connect} from 'react-redux'
 import React, {Component} from 'react'
 import Navbar from './components/navbar.js'
@@ -9,7 +8,11 @@ import {searchSymbol, covidData,sortAlphabetical, sortCases, sortDeaths, searchN
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Covid from './components/covid'
+
+import SymbolContainer from './containers/symbolContainer.js'
 import CompanyContainer from './containers/newsContainer'
+import AllNewsContainer from './containers/allnewsContainer'
+
 
 class App extends Component{
 
@@ -45,8 +48,17 @@ componentDidMount(){
     <div> 
     <CompanyContainer results={this.props.news} searchNews={this.props.searchNews}/> 
     </div>} />
+
+    <Route exact path ="/news" render ={() => 
+    <div> 
+    <AllNewsContainer/> 
+    </div>} />
+
     </Router>
+      
     </div>
+
+
   );
 }} 
 
