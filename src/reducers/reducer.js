@@ -47,7 +47,7 @@ const reducer = ( state= {results:[], covid:[] }, action) => {
       console.table(action.data)
       return{
         ...state, 
-        result: action.data
+        results: action.data
       }
 
       default:

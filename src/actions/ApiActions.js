@@ -56,7 +56,7 @@ export const sortDeaths = () => {
 
 export const searchNews = (query) => {
     return dispatch => {
-    fetch(`https://finnhub.io/api/v1/news-sentiment?symbol=${query}${regex_token}`)
+    fetch(`https://finnhub.io/api/v1/stock/profile2?symbol=${query}${regex_token}`)
     .then(response => response.json())
     .then(data =>
         dispatch({type: "SEARCH_NEWS", data})
