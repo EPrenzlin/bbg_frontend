@@ -9,9 +9,11 @@ export default class NewsContainer extends Component {
     <div>
     <NewsForm searchNews={this.props.searchNews}/>
     
-    {console.log(this.props.results)}
+    {console.log('in the news container',this.props.results)}
     <NewsResult results={this.props.results}/>
     </div> 
       )
     }
   }
+
+  // change this into Company News
