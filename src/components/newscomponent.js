@@ -12,7 +12,7 @@ export default class NewsComponent extends Component {
     <h1> {this.props.data.headline} </h1>
     <h1> {this.props.data.source} </h1>
     <h1> {this.props.data.summary} </h1>
-    <h1> {this.props.data.url} </h1>
+    <a href ={this.props.data.url}> Link to Article</a>
     </Card>
     </div> 
       )
