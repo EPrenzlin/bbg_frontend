@@ -7,12 +7,12 @@ export default class NewsComponent extends Component {
     render() {
     return( 
     <div>
-    <Card> 
-    <h1> {this.props.data.category} </h1>
-    <h1> {this.props.data.headline} </h1>
-    <h1> {this.props.data.source} </h1>
-    <h1> {this.props.data.summary} </h1>
-    <a href ={this.props.data.url}> Link to Article</a>
+    <Card bg={'dark'} text={'light'} style={{width:'20 rem'}} border={'warning'}>
+    <Card.Title>{this.props.data.headline} </Card.Title>
+    <Card.Subtitle className="mb-4 text-muted">{this.props.data.category.toUpperCase()} </Card.Subtitle>
+    <h3> {this.props.data.source} </h3>
+    <text> {this.props.data.summary} </text>
+    <Card.Link href={this.props.data.url}>Link to Article</Card.Link>
     </Card>
     </div> 
       )
