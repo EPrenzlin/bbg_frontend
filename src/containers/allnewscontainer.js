@@ -1,6 +1,7 @@
 import React, {Component} from 'react' 
 import NewsComponent from '../components/newscomponent'
 import Row from 'react-bootstrap/Row'
+import CardColumns from 'react-bootstrap/CardColumns' 
 
 export default class AllNewsContainer extends Component {
  
@@ -8,11 +9,13 @@ export default class AllNewsContainer extends Component {
     render() {
     return( 
     <div>
-        <Row md={3}> 
+        <CardColumns>
+        {/* <Row md={3}>  */}
     {this.props.showNews.map(data => {
         return <NewsComponent data={data}/>
     })}
-    </Row>
+    {/* </Row> */}
+    </CardColumns>
     </div> 
       )
     }
