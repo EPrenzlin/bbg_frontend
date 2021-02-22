@@ -1,6 +1,6 @@
 import React, {Component} from 'react' 
 import ProfileForm from '../components/profileForm'
-import ProfileResult from '../components/profileResult'
+import Profileresult from '../components/profileResult'
 import CardColumns from 'react-bootstrap/CardColumns'
 import Card from 'react-bootstrap/esm/Card'
 import Container from 'react-bootstrap/Container'
@@ -14,9 +14,9 @@ export default class NewsContainer extends Component {
     <ProfileForm searchNews={this.props.searchNews}/>
 
     <Container> 
-    <ProfileResult results={this.props.results}/>
+    <Profileresult results={this.props.results}/>
     </Container>
-    
+
     </div> 
       )
     }
