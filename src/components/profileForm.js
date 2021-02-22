@@ -1,6 +1,8 @@
 import React, {Component} from 'react' 
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+import Container from 'react-bootstrap/Container'
+
 
 export default class ProfileForm extends Component {
 
@@ -27,12 +29,16 @@ export default class ProfileForm extends Component {
     render() {
     return( 
         <div> 
-            <h2> Get company's basic information.</h2>
-        <Form onSubmit={this.onSubmit}>   
+          <h2> Get company's basic information.</h2>
+          <Container> 
+        <Form onSubmit={this.onSubmit}>
+        <Form.Row className="justify-content-md-center">
         <textarea input type="text" name="searchquery" placeholder= "Input Search query(SYMBOL)" value={this.state.search} onChange={this.handleChange}/> 
         <Button type="submit" variant="primary">Search</Button> 
+        </Form.Row>
         </Form>
-        </div>
+        </Container>
+      </div>
       )
     }
   }
