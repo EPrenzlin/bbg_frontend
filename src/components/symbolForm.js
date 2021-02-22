@@ -28,9 +28,11 @@ export default class SymbolForm extends Component {
     render() {
       return( 
     <div> 
-    <Form onSubmit={this.onSubmit}>   
+    <Form onSubmit={this.onSubmit}>  
+    <Form.Row className="justify-content-md-center"> 
     <textarea input type="text" name="searchquery" placeholder= "Input Search query (ISIN, SYMBOL)" value={this.state.search} onChange={this.handleChange}/> 
     <Button type="submit" variant="primary">Search</Button> 
+    </Form.Row>
     </Form>
     </div>
       )
