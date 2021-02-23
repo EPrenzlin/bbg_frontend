@@ -73,14 +73,3 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps,{searchSymbol,covidData,sortAlphabetical, sortCases,sortDeaths, searchNews, getNews})(App) 
 
-
-
-//  Key data points I want to be able to display on the app: 
-  
-// Symbol Lookup => Type in the isin or the company name, and we get results in an array. 
-  
-    //  News sentiment => basically how many times a company has been mentioned in the past week or so. 
-  
-    // IPO Calandar => when any IPOs are coming into the forray in the future
-    
-    // total of 5 components 

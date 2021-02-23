@@ -18,7 +18,7 @@ export const searchSymbol = (query) => {
 
 export const covidData = () => {
     return dispatch => {
-        fetch(`https://finnhub.io/api/v1/covid19/us?token=c0bbs6f48v6to0roqolg`)
+        fetch(`https://finnhub.io/api/v1/covid19/us?token=${token}'`)
         .then (response => response.json())
         .then(data =>
             dispatch({type:"COVID", data}))
@@ -28,7 +28,7 @@ export const covidData = () => {
 
 export const sortAlphabetical = () => {
     return dispatch => {
-        fetch(`https://finnhub.io/api/v1/covid19/us?token=c0bbs6f48v6to0roqolg`)
+        fetch(`https://finnhub.io/api/v1/covid19/us?${regex_token}`)
         .then (response => response.json())
         .then(data =>
             dispatch({type:"SORT_ALPHA", data}))
@@ -37,7 +37,7 @@ export const sortAlphabetical = () => {
 
 export const sortCases = () => {
     return dispatch => {
-        fetch(`https://finnhub.io/api/v1/covid19/us?token=c0bbs6f48v6to0roqolg`)
+        fetch(`https://finnhub.io/api/v1/covid19/us?${regex_token}`)
         .then (response => response.json())
         .then(data =>
             dispatch({type:"SORT_CASES", data}))
@@ -46,7 +46,7 @@ export const sortCases = () => {
 
 export const sortDeaths = () => {
     return dispatch => {
-        fetch(`https://finnhub.io/api/v1/covid19/us?token=c0bbs6f48v6to0roqolg`)
+        fetch(`https://finnhub.io/api/v1/covid19/us?token=${regex_token}`)
         .then (response => response.json())
         .then(data =>
             dispatch({type:"SORT_DEATHS", data}))
@@ -66,7 +66,7 @@ export const searchNews = (query) => {
 
 export const getNews = () => {
     return dispatch => {
-        fetch(`https://finnhub.io/api/v1/news?category=general&token=c0bbs6f48v6to0roqolg`)
+        fetch(`https://finnhub.io/api/v1/news?category=general${regex_token}`)
         .then(response => response.json())
         .then(data =>
             dispatch({type: "GET_NEWS", data})
