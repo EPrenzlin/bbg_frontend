@@ -18,7 +18,7 @@ export const searchSymbol = (query) => {
 
 export const covidData = () => {
     return dispatch => {
-        fetch(`https://finnhub.io/api/v1/covid19/us?token=${token}'`)
+        fetch(`https://finnhub.io/api/v1/covid19/us?${regex_token}`)
         .then (response => response.json())
         .then(data =>
             dispatch({type:"COVID", data}))
@@ -46,7 +46,7 @@ export const sortCases = () => {
 
 export const sortDeaths = () => {
     return dispatch => {
-        fetch(`https://finnhub.io/api/v1/covid19/us?token=${regex_token}`)
+        fetch(`https://finnhub.io/api/v1/covid19/us?${regex_token}`)
         .then (response => response.json())
         .then(data =>
             dispatch({type:"SORT_DEATHS", data}))

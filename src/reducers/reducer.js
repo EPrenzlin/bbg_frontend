@@ -14,6 +14,7 @@ const reducer = ( state= {results:[], covid:[], news:[] }, action) => {
         results: newArray
       }
     case 'COVID': 
+    console.log(action.data)
     return {
       ...state, 
       covid: action.data
@@ -51,7 +52,6 @@ const reducer = ( state= {results:[], covid:[], news:[] }, action) => {
       }
 
     case "GET_NEWS" : 
-    console.log(" in get reducer", action.data)
     return{
     ...state, 
     news:action.data
