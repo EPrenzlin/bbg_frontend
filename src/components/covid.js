@@ -7,10 +7,12 @@ export default class Covid extends Component {
     render() {
       return( 
     <div> 
-<Card border="primary" bg="light" >   
-<h2> Covid State:{this.props.data.state}</h2>
-<h2> Cases: {this.props.data.case}</h2>
-<h2> Deaths: {this.props.data.death} </h2>
+<Card border="primary" bg="light" > 
+<Card.Text> 
+Covid State:{this.props.data.state} <br/>
+Cases: {this.props.data.case} <br/>
+Deaths: {this.props.data.death} <br/>
+</Card.Text>  
 </Card>
     </div>
       )
