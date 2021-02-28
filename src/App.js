@@ -67,7 +67,8 @@ const mapStateToProps = state => {
   return {
     result: state.results, 
     covid: state.covid,
-    news: state.news
+    news: state.news, 
+    quote: state.quote
   }
 }
 
