@@ -5,6 +5,8 @@ Inspired by the current Bloomberg Terminal, I built this using an external API t
 
 The basic functionality includes users being able to search for Stocks via Symbols, able to view news stories, see the latest Covid-19 Data, and the latest stock prices for searched Company. 
 
+Please see the license tab for licensing queries. 
+
 
 
 # Getting Started with Create React App
