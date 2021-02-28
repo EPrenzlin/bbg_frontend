@@ -11,10 +11,9 @@ export default class QuoteContainer extends Component {
     return(
       <div>
       <Container>
-      <QuoteForm/>
-      <QuoteResult/> 
+      <QuoteForm getQuote={this.props.getQuote}/>
+        
       </Container>
-
     </div> 
     ) 
   } 

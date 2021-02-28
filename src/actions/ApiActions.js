@@ -73,3 +73,13 @@ export const getNews = () => {
             )
         } 
 }
+
+export const getQuote = (query) => {
+    return dispatch => {
+        fetch(`https://finnhub.io/api/v1/quote?symbol=${query}${regex_token}`)
+        .then(response => response.json())
+        .then(data => 
+            dispatch({type:"GET_QUOTE", data})
+        )
+    }
+}

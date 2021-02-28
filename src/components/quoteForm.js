@@ -1,4 +1,6 @@
 import React, {Component} from 'react' 
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 
 export default class QuoteForm extends Component{
     state ={
@@ -15,6 +17,7 @@ export default class QuoteForm extends Component{
     onSubmit = event => {
         event.preventDefault()
         const query = this.state.search
+        this.props.getQuote(this.state.search)
         this.setState({
             search:""
         })
@@ -22,9 +25,12 @@ export default class QuoteForm extends Component{
 
     render(){
         return(
-            <div> 
-                <h1> Hello from QuoteForm</h1>
-            </div>
+            <Form onSubmit={this.onSubmit}>  
+            <Form.Row className="justify-content-md-center"> 
+            <textarea input type="text" name="searchquery" placeholder= "Input SYMBOL for latest Prices" value={this.state.search} onChange={this.handleChange}/> 
+            <Button type="submit" variant="primary">Search</Button> 
+            </Form.Row>
+            </Form>
         )
     }
 }
