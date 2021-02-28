@@ -17,6 +17,9 @@ export default class NavBar extends Component{
             <Nav.Item>
               <Nav.Link href="/news">News</Nav.Link>
             </Nav.Item>
+            <Nav.Item> 
+              <Nav.Link href="quote"> Stock Quotes </Nav.Link>
+            </Nav.Item>
           </Nav>
         )
     }
