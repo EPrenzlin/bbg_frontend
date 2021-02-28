@@ -1,19 +1,19 @@
 import React, {Component} from 'react' 
 import QuoteForm from '../components/quoteForm'
 import QuoteResult from '../components/quoteResult'
-
-import Row from 'react-bootstrap/Row'
-
 import Container from 'react-bootstrap/Container'
 
 export default class QuoteContainer extends Component {
     render() {
     return(
       <div>
-      <Container>
+      <h1> Get latest Stock Prices </h1>
       <QuoteForm getQuote={this.props.getQuote}/>
-        
+      
+      <Container> 
+      <QuoteResult results={this.props.quoteResult}/>
       </Container>
+      
     </div> 
     ) 
   } 

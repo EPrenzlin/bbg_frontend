@@ -58,7 +58,7 @@ const reducer = ( state= {results:[], covid:[], news:[], quote:[] }, action) => 
 
     case "GET_QUOTE":
       console.log(action.data)
-      return{
+       return{
         ...state, 
         quote: action.data
       }

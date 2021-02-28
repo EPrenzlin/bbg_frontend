@@ -58,7 +58,7 @@ componentDidMount(){
 
     <Route exact path ="/quote" render ={() => 
     <div> 
-      <QuoteContainer getQuote={this.props.getQuote}/>
+      <QuoteContainer getQuote={this.props.getQuote} quoteResult={this.props.quote}/>
     </div>}/>
 
     </Router>
