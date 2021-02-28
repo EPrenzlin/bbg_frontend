@@ -1,3 +1,12 @@
+
+# A Bloomberg Financial Terminal replica built using an external API. 
+
+Inspired by the current Bloomberg Terminal, I built this using an external API that provides users with various free information. 
+
+The basic functionality includes users being able to search for Stocks via Symbols, able to view news stories, see the latest Covid-19 Data, and the latest stock prices for searched Company. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
