@@ -12,6 +12,7 @@ import Covid from './components/covid'
 import SymbolContainer from './containers/symbolContainer.js'
 import CompanyContainer from './containers/profileContainer'
 import AllNewsContainer from './containers/allnewsContainer'
+import QuoteContainer from './containers/quoteContainer';
 
 
 class App extends Component{
@@ -54,6 +55,11 @@ componentDidMount(){
     <div> 
     <AllNewsContainer getNews={this.props.getNews} showNews={this.props.news}/> 
     </div>} />
+
+    <Route exact path ="/quote" render ={() => 
+    <div> 
+      <QuoteContainer/>
+    </div>}/>
 
     </Router>
       
